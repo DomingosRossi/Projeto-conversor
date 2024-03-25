@@ -10,22 +10,30 @@ function convertValues() {
     console.log(currencySelect.value)
     const dolarToday = 5.2;
     const euroToday = 6.2;
+    const libraToday = 4.6;
 
-if(currencySelect.value=="dolar") {
-    currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
-        style: "currency",
-        currency: "USD"
-    }).format(inputCurrencyValue / dolarToday)
-}
+    if (currencySelect.value == "dolar") {
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD"
+        }).format(inputCurrencyValue / dolarToday)
+    }
 
-if(currencySelect.value=="euro") {
-    currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
-        style: "currency",
-        currency: "EUR"
-    }).format(inputCurrencyValue / euroToday)
-}
+    if (currencySelect.value == "euro") {
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
+            style: "currency",
+            currency: "EUR"
+        }).format(inputCurrencyValue / euroToday)
+    }
 
-    
+    if (currencySelect.value == "libra") {
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("en-UK", {
+            style: "currency",
+            currency: "GBP"
+        }).format(inputCurrencyValue / libraToday)
+    }
+
+
 
     currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
         style: "currency",
@@ -35,20 +43,25 @@ if(currencySelect.value=="euro") {
 }
 
 function changeCurrency() {
-const currencyName = document.getElementById("currency-name")
-const currencyImage = document.querySelector(".currency-img")
+    const currencyName = document.getElementById("currency-name")
+    const currencyImage = document.querySelector(".currency-img")
 
-if (currencySelect.value=="dolar") {
-    currencyName.innerHTML = "Dólar americano"
-    currencyImage.src = "./assents/dolar.png"
-}
+    if (currencySelect.value == "dolar") {
+        currencyName.innerHTML = "Dólar americano"
+        currencyImage.src = "./assents/dolar.png"
+    }
 
-if (currencySelect.value=="euro") {
-    currencyName.innerHTML = "Euro"
-    currencyImage.src = "./assents/euro.png"
-}
+    if (currencySelect.value == "euro") {
+        currencyName.innerHTML = "Euro"
+        currencyImage.src = "./assents/euro.png"
+    }
 
-convertValues()
+    if (currencySelect.value == "libra") {
+        currencyName.innerHTML = "Libra"
+        currencyImage.src = "./assents/libra.png"
+    }
+
+    convertValues()
 
 }
 
