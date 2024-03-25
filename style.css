@@ -18,10 +18,11 @@ body {
 
 main {
     width: 375px;
-    background: #F4F4F4;
+    background: #FFFFFF;
     border-radius: 20px;
     margin: 0 auto 40px;
     padding: 44px 24px 23px;
+
 }
 
 label {
@@ -95,4 +96,19 @@ font-size: 14px;
 color: #555555;
 font-weight: 700;
 font-size: 20px;
+}
+
+@media screen and (max-width: 500px) {
+    main {
+        background-image: url(./assents/background.png);
+    }
+
+    .currency {
+        color: #FFFFFF;
+    }
+
+label {
+    color: #FFFFFF;
+}
+
 }
