@@ -112,4 +112,8 @@ label {
     color: #FFFFFF;
 }
 
+.logo {
+    display: none;
+}
+
 }
